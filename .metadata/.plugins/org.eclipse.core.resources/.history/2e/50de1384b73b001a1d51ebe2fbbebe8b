@@ -1,0 +1,29 @@
+package ECC;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import ECC.DriverType;
+import ECC.WebDriverInitiate;
+
+public class eccLoginSuccess {
+		
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub		
+		System.setProperty("webdriver.chrome.driver", "D:\\DKV\\Misc\\chromedriver_win32\\chromedriver.exe");
+		WebDriverInitiate webDriverInitiate=new WebDriverInitiate();
+		WebDriver driver= webDriverInitiate.getWebDriver(DriverType.CHROME);		
+		driver.get("https://fq-eps-08:58442/ecc/login.jsp");
+		System.out.println(driver.getCurrentUrl());
+//		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("sau");
+//		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("hello321");
+//		driver.findElement(By.xpath("//area[contains(@onclick,'document.getElementById')]")).click();
+//		
+//		if(driver.findElement(By.xpath("//button[@id='details-button']")).isDisplayed()) {
+//			driver.fidnElement(By.xpath("//input")
+//		}
+	}
+}

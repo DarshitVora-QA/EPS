@@ -1,0 +1,22 @@
+package ECC;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import ECC.DriverType;
+import ECC.WebDriverInitiate;
+
+public class eccLoginSuccess {
+	static WebDriverInitiate webDriverInitiate;
+	static WebDriver driver;	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub		
+		System.setProperty("webdriver.chrome.drive", "D:\\DKV\\Misc\\chromedriver_win32\\chromedriver.exe");
+		driver =new webDriverInitiate.getWebDriver(DriverType.CHROME);
+		driver.get("https://ad-retailqaecc-01:58441/ecc/login.jsp");
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("sau");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("hello321");
+		driver.findElement(By.xpath("//area[contains(@onclick,'document.getElementById')]")).click();
+	}
+
+}

@@ -1,0 +1,19 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDriverInitiate {
+	WebDriver webDriverInitiate;
+	public WebDriver getWebDriver(DriverType type) {		
+		
+		switch(type) {
+		case CHROME:
+			webDriverInitiate = new ChromeDriver();
+			break;
+		case FIREFOX:
+			webDriverInitiate = new FirefoxDriver();
+			break;
+		}		
+		return webDriverInitiate;
+	}
+}

@@ -1,0 +1,25 @@
+package ECC;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class WebDriverInitiate {
+	WebDriver webDriverInitiate;
+	@SuppressWarnings("deprecation")
+	public WebDriver getWebDriver(DriverType type) {		
+		DesiredCapabilities handlSSLErr = DesiredCapabilities.chrome();     
+		handlSSLErr.setCapability (CapabilityType.ACCEPT_SSL_CERTS, true);
+		switch(type) {
+		case CHROME:
+			webDriverInitiate = new ChromeDriver();
+			break;
+		case FIREFOX:
+			webDriverInitiate = new FirefoxDriver();
+			break;
+		}		
+		return webDriverInitiate;
+	}
+}
