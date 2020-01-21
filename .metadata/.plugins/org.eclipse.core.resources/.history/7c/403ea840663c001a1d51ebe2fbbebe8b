@@ -1,0 +1,6 @@
+package ecc;
+
+public enum DriverType {
+	CHROME,FIREFOX;
+
+}

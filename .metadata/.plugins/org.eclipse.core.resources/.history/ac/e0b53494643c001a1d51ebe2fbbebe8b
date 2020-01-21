@@ -1,0 +1,10 @@
+package ECC;
+
+public class LoginError {
+
+	public static String getLoginError() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
