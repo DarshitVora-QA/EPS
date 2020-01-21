@@ -1,0 +1,24 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDriverInitiate {
+	WebDriver webDriverInitiate;
+	public WebDriver ChromeDriverInitiater() {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\DKV\\Misc\\chromedriver_win32\\chromedriver.exe");
+		webDriverInitiate = new ChromeDriver();		
+		return webDriverInitiate;
+	}
+	public static void FirefoxDriverInitiater() {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.gecko.driver", "D:\\DKV\\Misc\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+	}
+}

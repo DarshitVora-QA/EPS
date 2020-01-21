@@ -1,0 +1,6 @@
+package ECC;
+
+public enum DriverType {
+	CHROME,FIREFOX;
+
+}
